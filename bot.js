@@ -31,7 +31,7 @@ bot.command('query', (ctx) => {
     {
         axios.get(process.env.API_PATH + "function=TIME_SERIES_DAILY" + "&symbol=" + words[1] + "&apikey=" + process.env.API_KEY)
             .then(res => {
-                let data = res.data['Daily Time Series']
+                let data = res.data['Time Series (Daily)']
                 let price = null
                 let count = 0
                 let prev = null
